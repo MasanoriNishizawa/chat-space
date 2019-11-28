@@ -9,7 +9,8 @@
           - @group.users.each do |group_member|
             %div #{group_member.name}&nbsp;
     .main-header__edit-btn
-      Edit
+      = link_to edit_group_path(@group[:id]), class: "timeline__editBtn " do
+        Edit
 
   .messages
     = render @messages
