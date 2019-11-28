@@ -8,7 +8,8 @@
         .main-header__left-box__member-list__member
           西澤
     .main-header__edit-btn
-      Edit
+      = link_to edit_group_path(@group[:id]), class: "timeline__editBtn " do
+        Edit
 
   .messages
     = render @messages
