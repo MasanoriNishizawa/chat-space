@@ -5,16 +5,16 @@ $(function(){
     var img = '<img src=${message.image} class: "lower-message__image">'
     }
     var html =`<div class="message" data-message-id=${message.id}>
-                <div class="upper-message">
-                  <div class="upper-message__user-name">
+                <div class="message__upper-info">
+                  <div class="message__upper-info__talker">
                     ${message.user_name}
                   </div>
-                  <div class="upper-message__date">
+                  <div class="message__upper-info__date">
                     ${message.date}
                   </div>
                 </div>
-                <div class="lower-message">
-                <div class="lower-message__content">
+                <div class="message__text">
+                <div class="message__text__content">
                   ${message.content}
                   ${img}
                 </div>
@@ -38,6 +38,7 @@ $('#new_message').on('submit', function(e){
     $('.messages').append(html);
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
     $('form')[0].reset();
+    $('.form__submit').prop("disabled", false)
   })
    .fail(function(){
      alert('error');
