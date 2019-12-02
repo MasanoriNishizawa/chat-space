@@ -56,7 +56,6 @@ box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   border-bottom: solid 1px #eee;
-  overflow: scroll;
 
     &__left-box{
       margin-top: 35px;
@@ -72,7 +71,9 @@ box-sizing: border-box;
             color: $light-grey;
             display: flex;
 
-}}
+            &__member{
+              display: flex;
+            }}}
 
     &__edit-btn{
       height: 40px;
