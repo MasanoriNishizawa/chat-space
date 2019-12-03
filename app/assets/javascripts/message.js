@@ -70,4 +70,4 @@ $('#new_message').on('submit', function(e){
     }
   };
   setInterval(reloadMessages, 7000);
-  });
+});
