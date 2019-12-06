@@ -47,9 +47,8 @@ $('#new_message').on('submit', function(e){
 
   var reloadMessages = function () {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
-      last_message_id = $('.messages').last().data('id');
+    var last_message_id = $('.message:last').data("message-id");
       
-
       $.ajax({ 
         url: "api/messages",
         type: 'get',
